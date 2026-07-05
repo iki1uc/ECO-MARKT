@@ -1,43 +1,19 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ECO‑MARKT – Modul</title>
+<div id="ecoVec"></div>
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #e8f5e9;
-        color: #1b5e20;
-        margin: 40px;
-    }
-    .box {
-        background: #ffffff;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 0 12px rgba(0,0,0,0.15);
-    }
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-    .pulse {
-        animation: pulse 1.4s infinite;
-    }
-    @keyframes pulse {
-        0% { opacity: 0.4; }
-        50% { opacity: 1; }
-        100% { opacity: 0.4; }
-    }
-</style>
-</head>
+<script>
+function ecoVector(soll, ist) {
+    const dx = ist.x - soll.x;
+    const dy = ist.y - soll.y;
+    const dz = ist.z - soll.z;
 
-<body>
-<div class="box pulse">
-    <h1>ECO‑MARKT – LIVE</h1>
-    <p>Dieses Modul ist aktiv und bereit für Erweiterungen.</p>
-    <p>Status: <strong>ONLINE</strong></p>
-</div>
-</body>
-</html>
+    return `Δ = (${dx}, ${dy}, ${dz})`;
+}
+
+setInterval(()=>{
+    const soll = {x:12, y:4, z:9};
+    const ist  = {x:10 + Math.random()*2, y:5, z:7 + Math.random()*2};
+
+    document.getElementById("ecoVec").textContent =
+        "ECO‑MARKT Vektor: " + ecoVector(soll, ist);
+}, 300);
+</script>
