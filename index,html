@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iki1uc – Modul</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECO‑MARKT – Modul</title>
 
-    <!-- Basis‑Style: neutral, minimal, systemfrei -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background: #f5f5f5;
-            color: #222;
-        }
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .box {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-    </style>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #e8f5e9;
+        color: #1b5e20;
+        margin: 40px;
+    }
+    .box {
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    }
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .pulse {
+        animation: pulse 1.4s infinite;
+    }
+    @keyframes pulse {
+        0% { opacity: 0.4; }
+        50% { opacity: 1; }
+        100% { opacity: 0.4; }
+    }
+</style>
 </head>
 
 <body>
-    <div class="box">
-        <h1>iki1uc – Modul</h1>
-        <p>Dieses Repository enthält ein Modul des iki1uc‑Systems.</p>
-        <p>Diese Seite dient als neutrale Standard‑Ansicht für Repos mit index.html.</p>
-        <p>Weitere Inhalte können später ergänzt werden.</p>
-    </div>
+<div class="box pulse">
+    <h1>ECO‑MARKT – LIVE</h1>
+    <p>Dieses Modul ist aktiv und bereit für Erweiterungen.</p>
+    <p>Status: <strong>ONLINE</strong></p>
+</div>
 </body>
 </html>
-
