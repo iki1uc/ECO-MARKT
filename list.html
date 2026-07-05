@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>ECO‑MARKT – Vektor‑Liste</title>
+
+<style>
+body {
+    background:#f5f5f5;
+    color:#222;
+    font-family:Arial, sans-serif;
+    padding:40px;
+}
+.box {
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+</style>
+
+<script src="eco.js"></script>
+
+</head>
+
+<body>
+<div class="box">
+    <h1>ECO‑MARKT – Soll/Ist‑Vektoren</h1>
+    <p>Live‑Abgleich der Raumdaten:</p>
+
+    <ul id="list"></ul>
+</div>
+
+<script>
+window.onload = () => {
+    const ul = document.getElementById("list");
+
+    ecoVectors.forEach(v => {
+        const li = document.createElement("li");
+        li.textContent =
+            `${v.name}: Soll(${v.soll.x},${v.soll.y},${v.soll.z}) | Ist(${v.ist.x},${v.ist.y},${v.ist.z}) | Δ(${v.delta.x},${v.delta.y},${v.delta.z})`;
+        ul.appendChild(li);
+    });
+};
+</script>
+</body>
+</html>
 
